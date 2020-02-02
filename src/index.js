@@ -1,15 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./less/main.less";
+
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ConfigProvider } from "antd";
 import faIR from "antd/es/locale-provider/fa_IR";
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
-  <ConfigProvider>
+  <Router>
     <App />
-  </ConfigProvider>,
+  </Router>,
   document.getElementById("root")
 );
 

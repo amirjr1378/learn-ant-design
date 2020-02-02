@@ -1,12 +1,8 @@
 import React from "react";
-import "./less/main.less";
-import { DatePicker } from "antd";
-
+import { Route } from "react-router-dom";
+import DefaultLayout from "./Layout";
 const App = () => {
-  function onChange(date, dateString) {
-    console.log(date, dateString);
-  }
-  return <DatePicker onChange={onChange} />;
+  return <Route path="/" render={DefaultLayout} />;
 };
 
 export default App;

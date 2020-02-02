@@ -12,3 +12,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.header {
+  background-color: white !important;
+  display: flex !important;
+}
+
+.navbar {
+  margin-left: auto !important;
+}
+
+.sider {
+  height: 100vh;
+  background-color: white !important;
+}
+
+.ant-layout-sider-trigger {
+  background-color: white !important;
+  color: black !important;
+}
