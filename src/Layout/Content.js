@@ -7,10 +7,11 @@ import Breadcrumbs from "../Components/Breadcrumbs/Breadcrumbs";
 export default function Content(props) {
   console.log("routes", props.routes);
   return (
-    <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>
+    <div style={{ padding: 24, minHeight: 280 }}>
       <Breadcrumbs />
 
-      {routes && routes.map(route => <Route {...route} />)}
+      <div style={{ marginTop: 50, display: "block" }} />
+      {routes && routes.map((route, i) => <Route key={i} {...route} />)}
     </div>
   );
 }

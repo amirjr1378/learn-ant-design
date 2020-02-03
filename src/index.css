@@ -24,6 +24,12 @@ code {
 .sider {
   height: 100vh;
   background-color: white !important;
+  position: fixed !important;
+  left: 0;
+  z-index: 100;
+}
+.footer {
+  margin-top: auto;
 }
 
 .ant-layout-sider-trigger {

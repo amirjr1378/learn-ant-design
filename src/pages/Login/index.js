@@ -39,7 +39,7 @@ class Login extends React.Component {
     return (
       <Form onSubmit={this.handleSubmit} layout="vertical">
         <Row gutter={[20, 2]}>
-          <Col xs={24} md={12}>
+          <Col xs={24} md={8}>
             <Form.Item
               hasFeedback
               label="username"
@@ -60,7 +60,7 @@ class Login extends React.Component {
               )}
             </Form.Item>
           </Col>
-          <Col xs={24} md={12}>
+          <Col xs={24} md={8}>
             <Form.Item
               hasFeedback
               label="passsword"
@@ -72,7 +72,7 @@ class Login extends React.Component {
                   { required: true, message: "Please input your Password!" }
                 ]
               })(
-                <Input
+                <Input.Password
                   prefix={
                     <Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />
                   }

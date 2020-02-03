@@ -1,13 +1,22 @@
-import Page1 from "./pages/page1";
-import Page2 from "./pages/page2";
+import Users from "./pages/users";
+import User from "./pages/user";
+import Posts from "./pages/posts";
+import Post from "./pages/post";
 import Login from "./pages/Login";
 export const routes = [
   {
-    path: "/page1",
-    component: Page1,
+    path: "/users",
+    component: Users,
     exact: true,
-    breadcrumbName: "page 1"
+    breadcrumbName: "users"
   },
-  { path: "/page2", component: Page2, exact: true, breadcrumbName: "page 2" },
+  {
+    path: "/users/:id",
+    component: User,
+    exact: true,
+    breadcrumbName: "edit user"
+  },
+  { path: "/posts", component: Posts, exact: true, breadcrumbName: "posts" },
+  { path: "/posts/:id", component: Post, exact: true, breadcrumbName: "post" },
   { path: "/login", component: Login, exact: true, breadcrumbName: "login" }
 ];

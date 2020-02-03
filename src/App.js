@@ -1,8 +1,12 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import DefaultLayout from "./Layout";
 const App = () => {
-  return <Route path="/" render={DefaultLayout} />;
+  return (
+    <Switch>
+      <Route path="/" component={DefaultLayout} />
+    </Switch>
+  );
 };
 
-export default App;
+export default withRouter(App);

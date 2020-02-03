@@ -5,12 +5,12 @@ export const nav = [
     icon: "user",
     children: [
       {
-        url: "/page1",
-        name: "page 1"
+        url: "/users",
+        name: "users"
       },
       {
-        url: "/page2",
-        name: "page 2"
+        url: "/posts",
+        name: "posts"
       },
       {
         url: "/login",
