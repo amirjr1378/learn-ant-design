@@ -11,30 +11,29 @@ export default class DefaultLayout extends React.Component {
     return (
       <Layout>
         <Layout>
+          <Header className="header">
+            <DefaultHeader {...this.props} />
+          </Header>
+        </Layout>
+        <Layout>
           <Sider
             collapsible
             className="sider"
             breakpoint="lg"
             onBreakpoint={br => this.setState({ collapse: br })}
+            collapsedWidth={0}
           >
             <DefaultSider {...this.props} />
           </Sider>
-          <Layout>
-            <Header className="header">
-              <DefaultHeader {...this.props} />
-            </Header>
 
+          <Layout>
             <Content
               style={{
-                margin: this.state.collapse
-                  ? "10px 2px 10px 80px"
-                  : "10px 10px 10px 200px",
-                minHeight: "83vh"
+                margin: this.state.collapse ? "10x" : "30px 20px"
               }}
             >
               <DefaultContent {...this.props} />
             </Content>
-
             <Footer className="footer">
               <DefaultFooter {...this.props} />
             </Footer>
